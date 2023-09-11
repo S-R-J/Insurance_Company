@@ -9,7 +9,6 @@
 
 => Developed automated invoice generation and delivery system for policy purchases.
 
-
 # Getting Started 
 
 --> In order to work with MongoDB, first you need to install MongoDB on your computer. To do this, visit the official download center and download the version for your specific OS.
