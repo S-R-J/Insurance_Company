@@ -1,0 +1,392 @@
+<html>
+
+<head>
+    <title>A N insurance</title>
+</head>
+
+
+<style>
+    * {
+        margin: 10px;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .navigationbar {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #192440;
+        color: white;
+        height: 70px;
+        /* grid-column-start: 2; */
+        /* grid-row-start: 1; */
+        /* justify-content: space-around; */
+    }
+
+    .companyname {
+        /* border: 2px solid black; */
+        font-size: 40px;
+    }
+
+    .details {
+        border: 1px solid black;
+        border-radius: 10px 10px;
+        height: 200px;
+        display: flex;
+
+    }
+
+    #detailzz {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid black;
+        height: 50px;
+        font-size: 30px;
+        /* margin-bottom: 50px; */
+        margin-left: 50px;
+
+
+    }
+
+    #detailzz1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid black;
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    .butttn {
+        /* border: 2px solid black; */
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin-right: 30vw; */
+
+
+    }
+
+
+    #btn {
+        color: white;
+        font-size: 25px;
+        background-color: black;
+        height: 50px;
+        width: 200px;
+        border-radius: 15px 15px;
+
+    }
+
+    #btn {
+        cursor: pointer;
+    }
+
+    #hlvtext {
+        font-size: 30px;
+        /* border: 2px solid black; */
+    }
+
+    .finalval {
+        display: flex;
+        /* border: 2px solid black; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .value {
+        font-size: 30px;
+        /* border: 2px solid rgb(255, 0, 0); */
+    }
+
+
+    .navigationbar {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        /* grid-column-start: 2; */
+        /* grid-row-start: 1; */
+        /* justify-content: space-around; */
+    }
+
+    .heading {
+        display: flex;
+        justify-content: left;
+        font-size: 30px;
+        /* border: 2px black solid; */
+
+
+    }
+
+    .heading:hover {
+        cursor: pointer;
+    }
+
+    .list {
+        display: flex;
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* border: 2px red solid; */
+        font-size: 20px;
+        justify-content: right;
+        cursor: pointer;
+
+    }
+
+
+    .welcome {
+        display: flex;
+        /* justify-content: left; */
+        /* border: 2px blue solid; */
+        font-size: 50px;
+        /* margin-top: 20px; */
+        /* margin-left: 80px; */
+
+    }
+
+    .displayageincome {
+        display: grid;
+        margin-left: 20vw;
+        border: 2px black solid;
+        border-radius: 10px 10px;
+    }
+
+    .show {
+        border: 1px black solid;
+    }
+
+    .age_income_text {
+        font-size: 25px;
+    }
+
+    .policy_premium {
+        display: flex;
+        margin-top: 30px;
+        border: 2px black solid;
+        border-radius: 15px 15px;
+    }
+
+    .urpremium {
+
+        border: 2px black solid;
+        border-radius: 10px 10px;
+        width: 30vw;
+    }
+
+    #your_prem_text,
+    #valuee {
+        font-size: 26px;
+    }
+</style>
+
+
+<body>
+    <div class="navigationbar">
+        <div class="heading" onclick="window.location.href = '/'">A N Insurance</div>
+        <div class="nav-items">
+            <div class="list">
+                <div>Helpline</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+
+    <div class="welcome">
+        Hello, <%= show.name %>
+    </div>
+
+
+    <div class="details">
+
+        <div id="detailzz">HLV Calculate</div>
+
+
+        <div class="displayageincome">
+            <div class="show">
+                <div class="age_income_text">Age is : <%= show.age %>
+                </div>
+                <div class="age_income_text">Income is : <%= show.income %>
+                </div>
+            </div>
+
+            <div class="finalval">
+                <div id="hlvtext">Your HLV is = <%= hlv %>
+                </div>
+                <!-- <div class="value" id="value">(Enter Age and Income)</div> -->
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- <div class="butttn"  ><button id="btn" onclick= myfunction()>Calculate</button></div> -->
+
+
+
+    <!-- 
+    <div class="butttn">
+        <button id="btn" name="save" onclick="window.location.href = '/termpolicies'">Next</button>
+    </div> -->
+
+
+    <!-- ---------------------------------------------------------------------------------- -->
+
+    <div class="policy_premium">
+        <form action="/makepayment" method="post" id="selecter">
+
+            <div>Choose Policy cover
+                <select name="cover" id="cover" onchange="myfunction()">
+                    <option value="">Choose</option>
+                    <option value="1000000">1,00,00,00</option>
+                    <option value="2000000">20,00,000</option>
+                    <option value="3000000">30,00,000</option>
+                    <option value="4000000">40,00,000</option>
+                    <option value="5000000">50,00,000</option>
+                    <option value="6000000">60,00,000</option>
+                </select>
+            </div>
+
+            <div>Choose Policy year
+                <select name="year" id="year">
+                    <!-- <option value="">Choose</option> -->
+                    <option value="60">Cover for 60 year </option>
+                    <option value="75">Cover for 75 year</option>
+                    <option value="85">Cover for 85 year</option>
+                    <option value="95">Cover for 95 year </option>
+                    <option value="100">Cover for 100 year </option>
+                </select>
+            </div>
+
+            <div>Choose Paying Term
+                <select name="term" id="term">
+                    <!-- <option value="">Choose</option> -->
+                    <option value="Monthly">Monthly</option>
+                    <option value="Quarterly">Quarterly</option>
+                    <option value="Yearly">Yearly</option>
+                    <option value="Full Payment">One time Full Payment</option>
+
+                </select>
+            </div>
+
+
+            <div class="urprem_button">
+                <div class="urpremium">
+                    <div id="your_prem_text">Your Premium</div>
+                    <div id="valuee">(Please Select Values)</div>
+                </div>
+    
+    
+                <div class="confirmnumber">
+                    <div>Please enter your registered mobile number to proceed for Payment</div>
+                    <input type="text" pattern="[0-9]+" maxlength="10" minlength="10" placeholder="10-Digit Mobile Number" id="mob_number" name="number" class="number_pass_input">
+                </div>
+            
+            
+            
+                <div class="butttn"><button id="btn">Payment 👍</button></div>
+    
+            </div>
+    
+
+            <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+        </form>
+
+
+        
+
+
+
+    </div>
+
+    
+
+
+    <script>
+
+        function myfunction() {
+
+            var policy_cover = document.getElementById("cover");
+            var selectedvalue = policy_cover.value;
+            // var income = document.getElementById("income").value;
+            // var income = document.getElementById("income").value;
+            var displayhlv = document.getElementById("valuee");
+
+
+            if (selectedvalue === "1000000") {
+                displayhlv.textContent = "Amount : 20,000 /-";
+            }
+
+            else if (selectedvalue === "2000000") {
+                displayhlv.textContent = "Amount : 40,000 /-";
+            }
+
+            else if (selectedvalue === "3000000") {
+                displayhlv.textContent = "Amount : 60,000 /-";
+            }
+
+            else if (selectedvalue === "4000000") {
+                displayhlv.textContent = "Amount : 80,000 /-";
+            }
+
+            else if (selectedvalue === "5000000") {
+                displayhlv.textContent = "Amount : 1,00,000 /-";
+            }
+            else if (selectedvalue === "6000000") {
+                displayhlv.textContent = "Amount : 1,20,000 /-";
+            }
+
+
+            // else if (age >= 41 && age <= 45) {
+            //     var hlv = 15 * income;
+            // }
+
+
+            // else if (age >= 46 && age <= 50) {
+            //     var hlv = 12 * income;
+            // }
+
+
+            // else if (age >= 51 && age <= 55) {
+            //     var hlv = 10 * income;
+            // }
+
+
+            // else if (age >= 56 && age <= 100) {
+            //     var hlv = 5 * income;
+            // }
+
+            // else if (age >= 100) {
+            //     var hlv = 'Not Eligible due to age';
+            // }
+
+            // else if (age < 18 && age != 0) {
+            //     var hlv = 'Not Eligible due to age';
+            // }
+
+
+            // else if (income == 0 && age == 0) {
+            //     var hlv = 'Please Enter above age and Income';
+            // }
+
+
+
+        }
+
+    </script>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    html {
+        padding-top: 0.5in;
+    }
+
+
+    .page {
+        position: relative;
+        box-sizing: border-box;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 11in;
+        height: 12in;
+        padding: 0.5in;
+        width: 8.5in;
+        width: 200mm;
+        height: 200mm;
+        background: #FFF;
+        border-radius: 1px;
+        box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+        /* border: 2px red solid; */
+    }
+
+    .header {
+        margin: -50px -50px 0px -50px;
+        padding: 40px 40px;
+        background: #8495A2;
+        height: 50px;
+        color: white;
+    }
+
+    .invoice_text {
+        margin-top: -25px;
+        font-size: 50px;
+        opacity: 30%;
+
+    }
+
+    .invoice_text2
+    {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .custinfo {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        border-radius: 20px 20px;
+        border-bottom: 2px black solid;
+        height: 180px;
+        margin: 0px -50px 0px -50px;
+
+    }
+
+    .bill_to,
+    .invoicenumber,
+    .premiumprice {
+        margin-top: 20px;
+        /* border-bottom: 2px blue solid; */
+    }
+
+    .premiumprice
+    {
+        text-align: center;
+
+    }
+
+    .bodyy {
+        padding: 10px;
+        margin-top: 30px;
+        height: 280px;
+        border: 1.5px black solid;
+        border-radius: 15px 15px;
+    }
+
+    .premium_amount {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .cust{
+        /* font-size: 30px; */
+        margin: 10px;
+        /* border: 2px blue solid; */
+    }
+
+    .policydetails
+    {
+        font-size: 30px;
+    }
+
+    .policeee
+    {
+        font-size: 17px;
+        margin-left:30px ;
+        /* border: 2px red solid; */
+    }
+
+    .invoice_show
+    {
+        margin-top: 20px;
+    }
+
+    #premium_amt
+    {
+        font-size: 25px;
+    }
+
+    a
+    {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        margin-top: -20px;
+    }
+</style>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="invoice_text">A-N Insurance Company</div>
+            <div class="invoice_text2">INVOICE</div>
+            <!-- <input type="file" accept="image/*"> -->
+        </div>
+
+
+        <div class="custinfo">
+            <div class="bill_to">
+                <div>Bill To, </div>
+                <div class="cust">Name : <%= show.name %></div>
+                <div class="cust">Number : <%= show.number %></div>
+                <div class="cust" >Age : <%= show.age %></div>
+                <div class="cust">Gender : <%= show.gender %></div>
+            </div>
+            <div class="invoicenumber">
+                <br>
+                <div class="cust" >Education : <%= show.education %>
+                </div>
+                <div class="cust" >Annual Income : <%= show.income %>
+                </div>
+                <div  class="cust" >Occupation : <%= show.occupation %>
+                </div>
+                <div class="cust" >Do you Smoke? : <%= show.smoke %>
+                </div>
+            </div>
+            <div class="premiumprice">
+                <div class="invoice_show">Total Invoice Amount</div>
+                <div>
+                    <div class="premium_amount">
+                        ₹ <%= show.lifepremium %> /-
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bodyy">
+            <div class="policydetails">Policy Details</div><br><br>
+            <div class="policeee" >Your HLV : <%= show.hlv %>
+            </div><br>
+            <div class="policeee">Policy Cover : <%= show.cover %>
+            </div><br>
+            <div class="policeee">Policy Year : <%= show.lifeyear %>
+            </div><br>
+            <div class="policeee">Policy Term : <%= show.term %>
+            </div>
+            <br><br>
+            <div class="policeee" id="premium_amt"> Premium Amount : <%= show.lifepremium %></div>
+        </div>
+        <br>
+        <div>Thank you for Purchasing from A-N Insurance Company * </div>
+        <p>Press Ctrl+P to Print your Invoice</p>
+        <a href="/">Go to Homepage</a>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<h1>Payment Page</h1>
+    
+        <div>Name : <%= show.name %></div> 
+        <div>Number : <%= show.number %></div> 
+        <div>Age :  <%= show.age %></div>
+        <div>Gender : <%= show.gender %></div> 
+        <div>Education : <%= show.education %></div> 
+        <div>Annual Income : <%= show.income %></div> 
+        <div>Occupation : <%= show.occupation %></div> 
+        <div>Do you Smoke? : <%= show.smoke %></div> 
+        <div>Your HLV : <%= show.hlv %></div> 
+        <div>Policy Cover : <%= show.cover %></div> 
+        <div>Policy Year : <%= show.year %></div> 
+        <div>Policy Term : <%= show.term %></div>  -->

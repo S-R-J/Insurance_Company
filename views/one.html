@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .container
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+
+    
+    #opt1 , #opt2
+    {
+        display: none;
+    }
+
+    input
+    {
+        display: none;
+    }
+
+    .formm 
+    {
+        height: 200px;
+        width: 500px;
+        border: 2px solid black;
+    }
+
+    label
+    {
+        font-size: 30px;
+        border: 2px black solid;
+        height: 100px;
+        width: 300px;
+    }
+
+
+
+</style>
+<body>
+    <div class="container">
+   
+            <form action="" class="formm">
+                <input type="radio" id="option-1" name="chk" onclick="showdiv1()">
+                <input type="radio"id="option-2" name="chk" onclick="showdiv2()">
+                <label for="option-1" class="option option-1" id="label1">
+                    <span id="span1">Male</span>
+                <label for="option-2"  class="option option-2" id="label2">
+                    <span id="span2">Female</span>
+            </form>
+
+            <h1>
+            <div id="opt1">Option1</div>
+            <div id="opt2">Option2</div>
+        </h1>
+
+    </div>
+    
+</body>
+
+<script type="text/javascript">
+
+    function showdiv1()
+    {
+        document.getElementById('opt1').style.display = 'block';
+        document.getElementById('opt2').style.display = 'none';
+        document.getElementById('span1').style.backgroundColor = 'red';
+        document.getElementById('span2').style.backgroundColor = 'white';
+        
+    }
+    function showdiv2()
+    {
+        document.getElementById('opt2').style.display = 'block';
+        document.getElementById('opt1').style.display = 'none';
+        document.getElementById('span2').style.backgroundColor = 'red';
+        document.getElementById('span1').style.backgroundColor = 'white';
+    }
+
+
+
+</script>
+</html>

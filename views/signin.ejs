@@ -1,0 +1,346 @@
+<html>
+
+<head>
+    <title>A N insurance</title>
+    <!-- <meta http-equiv="refresh" content="2"> -->
+</head>
+
+<style>
+    * {
+        margin: auto;
+        padding: auto;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .navigationbar {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #192440;
+        color: white;
+        height: 70px;
+    }
+
+    .heading {
+        font-size: 35px;
+        /* border: 2px black solid; */
+
+    }
+
+    .heading:hover {
+        cursor: pointer;
+    }
+
+
+    .details {
+        border: 2px solid #192440;
+        /* background-color: #192440; */
+        border-radius: 70px 7px;
+        height: 530px;
+        display: box;
+
+        margin-right: 18%;
+
+        max-width: 400px;
+
+
+    }
+
+    .login-img
+    {
+        margin-right:-25px;
+    }
+
+    #detailzz {
+        display: flex;
+        justify-content: center;
+        /* border-bottom: 2px solid black; */
+        font-size: 30px;
+        margin-top: 30px;
+        /* padding-left: 20px;
+        padding-top: 20px; */
+        
+    }
+
+    #optionForm
+    {
+        /* border: 2px blue solid; */
+        padding: 10px;
+        height: 50%;
+    }
+
+    .number_pass
+    {
+        margin: 20px;
+        padding: 20px;
+    }
+    .number_pass_input
+    {
+        height: 30px;
+        width: 60%;
+        font-size: 15px;
+        margin-bottom:20px;
+        margin-left: 40px;
+        margin-top: 5px;
+    }
+    
+
+    .butttn {
+        /* border: 2px solid black; */
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+    #btn {
+        color: white;
+        font-size: 25px;
+        background-color: black;
+        border-radius: 10px;
+
+
+    }
+
+    #btn:hover {
+        cursor: pointer;
+    }
+
+    .asksignup {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    .signup-btn {
+        display: flex;
+        justify-content: center;
+        /* border: 2px solid black; */
+    }
+
+    .signup {
+        font-size: 25px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 10px;
+
+    }
+
+    .signup:hover {
+        cursor: pointer;
+
+    }
+
+
+    .heading:hover {
+        cursor: pointer;
+    }
+
+    .list {
+        display: flex;
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* border: 2px red solid; */
+        font-size: 20px;
+        justify-content: right;
+        cursor: pointer;
+
+    }
+
+    .all {
+        /* border: 2px red solid ; */
+        margin-top:50px ;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    /* -------------------------------------------------------------- */
+
+
+    .opp {
+        appearance: none;
+
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+
+        border: 2px solid #999;
+        transition: 0.2s all linear;
+        margin-right: 15px;
+        /* margin-top: 10px; */
+    
+
+
+
+    }
+
+    .opp:checked {
+        border: 8px solid black;
+    }
+
+    legend {
+        color: white;
+        background-color: black;
+        padding: 5px 10px;
+        border-radius: 0;
+        border: 0;
+        font-size: 14px;
+        /* text-align: center; */
+        margin-left: 25px;
+
+        /* border: 2px green solid; */
+
+    }
+
+    .option-txt {
+        position: relative;
+        top: -8px;
+        left: -15px;
+        font-size: 15px;
+        /* border: 2px red solid; */
+    }
+
+    .option-txt:hover {
+        cursor: pointer;
+    }
+
+    fieldset {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        margin-left: 10px;
+        padding: 0;
+        border-radius: 15px;
+        width: 25vw;
+        height: 30%;
+        max-width: 350px;
+    }
+
+    .bm {
+        margin-top: 15px;
+        
+    }
+
+</style>
+
+
+
+<body>
+    
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+    <div class="navigationbar">
+        <div class="heading" onclick="window.location.href = '/'">A-N Insurance Company</div>
+        <!-- <div class="nav-items">
+            <div class="list">
+                <div>Helpline</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        </div> -->
+    </div>   
+    <div><br></div>
+    <section class="all">
+        
+        <div class="login-img"><img src="images\signin_img2.jpg" width="600px"></div>
+        <div class="details">
+            <div>
+                <div id="detailzz">Login in to your Account</div>
+                <br>
+                <form action="/getquote" method="post" id="optionForm">
+                    <label class="number_pass" for="">Enter Registered Mobile number</label><br><input type="text" pattern="[0-9]+"
+                        maxlength="10" minlength="10" placeholder="10-Digit Mobile Number" id="mob_number"
+                        name="number" class="number_pass_input">
+                    <br>
+
+
+                    <label class="number_pass" for="">Enter Password</label><br><input type="password" minlength="3"
+                        placeholder=" * * * * * * * * " id="password" name="password" class="number_pass_input">
+                    <br>
+                    
+
+                    <fieldset>
+                        <legend>Please select Insurance Type</legend>
+                        <div class="bm">
+                            <input class="opp" type="radio" id="contactChoice1" name="contact" value="page1" />
+                            <label class="option-txt" for="contactChoice1">Life Insurance</label>
+
+                            <input class="opp" type="radio" id="contactChoice2" name="contact" value="page2" />
+                            <label class="option-txt" for="contactChoice2">Genral Insurance</label>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <div class="butttn"><button id="btn" type="submit" name="save">Submit</button></div>
+                </form>
+            </div>
+
+    
+            <br>
+            <br>
+            
+        
+
+            <div class="asksignup">Not yet Registered , Sign up Now</div>
+
+            
+            <div class="signup-btn">
+                <div class="signup" onclick="window.location.href = '/signup'">Signup</div>
+
+            </div>
+    </section>
+
+
+
+    <!-- <script>
+        const optionForm = document.getElementById('optionForm');
+
+        optionForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents the form from submitting and refreshing the page
+
+            const selectedOption = document.querySelector('input[name="contact"]:checked');
+
+            if (selectedOption) {
+                const optionValue = selectedOption.value;
+
+                if (optionValue === 'page1') {
+                    window.location.href = '/getquote';
+                } else if (optionValue === 'page2') {
+                    window.location.href = '/general';
+                }
+            }
+        });
+    </script> -->
+
+
+</body>
+
+<!-- <script>
+    var refreshFlag = true;
+    var refreshTimeout;
+
+    function refreshPage() {
+      if (refreshFlag) {
+        refreshFlag = false;
+        refreshTimeout = setTimeout(function() {
+          window.location.reload(); // Reload the page
+        }, 2000); // Refresh after 2 seconds (2000 milliseconds)
+      }
+    }
+
+    window.onload = function() {
+      refreshPage();
+    };
+  </script> -->
+
+
+
+</html>

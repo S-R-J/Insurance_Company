@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .red {
+      background-color: red;
+    }
+    
+    .green {
+      background-color: green;
+    }
+    
+    .blue {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <select id="colorSelect" onchange="changeDivText()">
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+  </select>
+  
+  <div id="myDiv">This is a div element.</div>
+
+  <script>
+    function changeDivText() {
+      var selectElement = document.getElementById("colorSelect");
+      var selectedColor = selectElement.value;
+      var divElement = document.getElementById("myDiv");
+      
+      // Change the text content based on selected color
+      if (selectedColor === "red") {
+        divElement.textContent = "You selected Red.";
+      } else if (selectedColor === "green") {
+        divElement.textContent = "You selected Green.";
+      } else if (selectedColor === "blue") {
+        divElement.textContent = "You selected Blue.";
+      }
+    }
+  </script>
+</body>
+</html>

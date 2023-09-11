@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div
+    {
+        margin: 30px;
+    }
+</style>
+
+<body>
+    <h1>Payment Page</h1>
+    
+        <div>Name : <%= show.name %></div> 
+        <div>Number : <%= show.number %></div> 
+        <div>Age :  <%= show.age %></div>
+        <div>Gender : <%= show.gender %></div> 
+        <div>Education : <%= show.education %></div> 
+        <div>Annual Income : <%= show.income %></div> 
+        <div>Occupation : <%= show.occupation %></div> 
+        <div>Do you Smoke? : <%= show.smoke %></div> 
+        <div>Your HLV : <%= show.hlv %></div> 
+        <div>Policy Cover : <%= show.cover %></div> 
+        <div>Policy Year : <%= show.year %></div> 
+        <div>Policy Term : <%= show.term %></div> 
+</body>
+
+</html>

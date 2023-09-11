@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <title>A N insurance</title>
+</head>
+
+
+<style>
+    * {
+
+        margin: 10px;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .navigationbar {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #192440;
+        color: white;
+        height: 70px;
+        /* grid-column-start: 2; */
+        /* grid-row-start: 1; */
+        /* justify-content: space-around; */
+    }
+
+    .companyname {
+        /* border: 2px solid black; */
+        font-size: 40px;
+    }
+
+    .details {
+        /* border: 2px solid black; */
+        /* height: 500px; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    #detailzz {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid black;
+        font-size: 30px;
+        margin-bottom: 50px;
+
+
+    }
+
+    .butttn {
+        /* border: 2px solid black; */
+        font-size: 30px;
+        display: flex;
+        align-items: right;
+        justify-content: right;
+        margin-right: 30vw;
+
+
+    }
+
+
+    #btn {
+        color: white;
+        font-size: 25px;
+        background-color: black;
+
+    }
+</style>
+
+
+<!-- ----------------------------------------------------------------------------------------- -->
+<style>
+    .navigationbar {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        /* grid-column-start: 2; */
+        /* grid-row-start: 1; */
+        /* justify-content: space-around; */
+    }
+
+    .heading {
+        display: flex;
+        justify-content: left;
+        font-size: 30px;
+        /* border: 2px black solid; */
+
+
+    }
+
+    .heading:hover {
+        cursor: pointer;
+    }
+
+    .list {
+        display: flex;
+        font-size: 20px;
+        justify-content: right;
+        cursor: pointer;
+
+    }
+
+
+</style>
+
+
+<body>
+    <div class="navigationbar">
+        <div class="heading" onclick="window.location.href = '/'">A N Insurance</div>
+        <div class="nav-items">
+            <div class="list">
+                <div>Helpline</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    <div class="all">
+        <section class="img">
+            <div class="details">
+                <div>
+                    <br>
+                    <div id="detailzz">Sign Up for New Acount</div>
+                    <form action="/signup" method="post">
+                        <label for="">Name</label>
+                        <input type="text" placeholder="Enter your full Name" minlength="1"
+                            name="name" id="name">
+                        <br>
+                        <label for="">Mobile Number</label>
+                        <input type="text" pattern="[0-9]+" maxlength="10"
+                            minlength="10" placeholder="Enter Mobile Number" name="number" id="mob_number">
+                        <br>
+                        <label for="">Enter New Password</label><input type="password" minlength="3"
+                            placeholder="Enter New Password" name="password" id="password">
+                        <br>
+                        <label for="">Confirm New Password</label><input type="text" minlength="3"
+                            placeholder="Confirm New Password">
+                        <br>
+                       
+                    <div class="butttn"><button id="btn" type="submit" name="save">Submit</button></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+
+</html>

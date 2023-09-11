@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <title>A N insurance</title>
+    </head>
+
+
+    <style>
+        *{
+            margin: 10px;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .navigationbar {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #192440;
+        color: white;
+        height: 70px;
+        /* grid-column-start: 2; */
+        /* grid-row-start: 1; */
+        /* justify-content: space-around; */
+    }
+        
+        .companyname
+        {
+            /* border: 2px solid black; */
+            font-size: 40px;
+        }
+        
+        .details
+        {
+            /* border: 2px solid black; */
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+
+        #detailzz
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+            font-size: 30px;
+            margin-bottom: 50px;
+            
+            
+        }
+
+        .butttn
+        {
+            /* border: 2px solid black; */
+            font-size: 30px;
+            display: flex;
+            align-items: right;
+            justify-content: right;
+            margin-right: 30vw;
+            
+          
+        }
+
+
+        #btn
+        {
+           color: white;
+           font-size: 25px;
+           background-color: black;
+           
+        }
+        
+
+
+        .navigationbar
+    {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        /* grid-column-start: 2; */
+        /* grid-row-start: 1; */
+        /* justify-content: space-around; */
+    }
+    .heading
+    {
+        display: flex;
+        justify-content: left;
+        font-size: 30px;
+        /* border: 2px black solid; */
+       
+    
+    }
+
+    .heading:hover
+    {
+        cursor: pointer;
+    }
+    .list
+    {
+        display: flex;
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* border: 2px red solid; */
+        font-size: 20px;
+        justify-content: right;
+        cursor: pointer;
+        
+    }
+</style>
+
+
+<body>
+    <div class="navigationbar">
+        <div class="heading" onclick="window.location.href = 'homepagedefault.php'">A N Insurance</div>
+        <div class="nav-items">
+            <div class="list">
+                <div>Helpline</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    
+
+        </div>
+
+
+        <div class="details">
+            <div>
+                <div id="detailzz">Fill up your details</div>
+                <form action="">
+                    <label for="">Name</label><input type="text" placeholder="Enter Name">
+                    <br>
+                    <label for="">Age</label><input type="text" placeholder="Enter Age">
+                    <br>
+                    <label for="">Gender</label>
+                                <select name="gender" id="gender">
+                                    <option value="">Choose</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                    <br>
+                    <label for="">Education</label>
+                                <select name="gender" id="gender">
+                                    <option value="">Choose</option>
+                                    <option value="male">SSC Passed</option>
+                                    <option value="female">HSC Passed</option>
+                                    <option value="female">Graduation and Above</option>
+                                    
+                                </select>
+                    <br>
+                    <label for="">Annual Income</label> 
+                    <select name="Salary" id="salary">
+                        <option value="">Choose</option>
+                        <option value="male">10,000 - 50,000</option>
+                        <option value="male">10,000 - 50,000</option>
+                        <option value="male">10,000 - 50,000</option>
+                        <option value="male">10,000 - 50,000</option>
+                    </select>
+                    <br>
+                    <label for="">Occupation</label> 
+                    <select name="Salary" id="salary">
+                        <option value="">Choose</option>
+                        <option value="male">Salaried</option>
+                        <option value="male">Self-Employed</option>
+                        <option value="male">Berozgaar </option>
+                    </select>
+                    <br>
+                    <label for="">Do you Smoke ?</label> 
+                    <select name="Salary" id="salary">
+                        <option value="">Choose</option>
+                        <option value="male">Yes</option>
+                        <option value="male">No</option>
+                       
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="butttn"><button id="btn">Submit</button></div>
+
+
+
+    </body>
+
+
+</html>

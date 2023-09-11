@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <title>an Insurance</title>
+</head>
+
+
+<style>
+    * {
+        margin: auto;
+        padding: auto;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .navigationbar {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #192440;
+        color: white;
+        height: 70px;
+    }
+
+
+    .heading
+    {
+        
+        font-size: 35px;
+        /* border: 2px red solid; */
+    }
+
+    .welcome {
+        display: flex;
+        justify-content: left;
+        /* border: 2px blue solid; */
+        font-size: 50px;
+        margin-top: 20px;
+        margin-left: 80px;
+
+    }
+
+    .container
+    {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* text-align: center; */
+        min-height: 30vh;
+        /* border: 2px red solid; */
+    
+    }
+
+    #bike_insurance_title
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .formm
+    {
+        margin-top: 50px;
+        padding: 15px;
+        display: grid;
+        border: 2px black solid;
+        font-size: 25px;
+        border-radius: 15px 15px;
+    }
+
+    input , select
+    {
+        font-size: 20px;
+    }
+
+    .urpremium
+    {
+        display: flex;
+        justify-content: stretch;
+        border: 2px green solid;
+        width: 20vw;
+        height: 50px;
+        border-radius: 10px 10px;
+    }
+
+    .butttn
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px blue solid; */
+        
+    }
+
+    #btn
+    {
+        font-size: 25px;
+        border-radius: 10px 10px;
+    }
+
+    #btn:hover { 
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }
+
+</style>
+
+
+<body>
+    <div class="navigationbar">
+        <div class="heading" onclick="window.location.href = '/'">A-N Insurance Company</div>
+        </div>
+    </div>
+
+    <div class="welcome">
+        Hello, <%= username %>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    <!-- <h1 id="detailzz1">General Insurance Policies </h1><br><br><br> -->
+    <div><br></div>
+
+
+
+    <div class="container">
+
+        <div class="details">
+            <div id="bike_insurance_title">BIKE INSURANCE</div>
+
+        <div class="formm">
+            <form action="/bikeinspayment" method="post">
+                <br>
+                <div>
+                    <label for="">Enter your bike's no.</label><input id="bikenumber" type="" placeholder="MH17AS6425">
+                </div>
+                <div>
+                    <br>
+                    <label for="">Confirm Registered Mobile No.</label><input type="text" pattern="[0-9]+" maxlength="10" minlength="10" placeholder="10-Digit Mobile Number" id="mob_number" name="number" class="number_pass_input">
+                </div>
+                <br>
+                <div>Choose Policy year
+                    <select name="cover" id="cover" onchange="changeText()">
+                        <option value="">Choose</option>
+                        <option value="option1">Cover for 1 year</option>
+                        <option value="option2">Cover for 2 year</option>
+                        <option value="option3">Cover for 3 year</option>
+                        <option value="option4">Cover for 4 year</option>
+                        <option value="option5">Cover for 5 year</option>
+                    </select>
+                </div>
+                <br>
+    
+    <!--    ---------------------------------------------------------------------------------------------------------------------- -->
+    <br>
+               <div class="urpremium">
+                    <div>Your Premium : </div>
+                    <div id="val"></div>
+                </div>
+
+                <br><br>
+                <div class="butttn"><button id="btn">Payment</button></div>
+    
+            </form>
+
+        </div>
+        
+
+      
+
+
+    </div>
+
+
+    </div>
+
+
+    
+    <script>
+        function changeText() {
+          var selectBox = document.getElementById("cover");
+          var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+          var divElement = document.getElementById("val");
+        
+          if (selectedValue === "option1") {
+            divElement.innerHTML = "20,000";
+          } else if (selectedValue === "option2") {
+            divElement.innerHTML = "40,000";
+          } else if (selectedValue === "option3") {
+            divElement.innerHTML = "60,000";
+          } else if (selectedValue === "option4") {
+            divElement.innerHTML = "80,000";
+          } else if (selectedValue === "option5") {
+            divElement.innerHTML = "1,00,000";
+          }
+        }
+        </script>
+
+
+
+
+</body>
+
+
+</html>

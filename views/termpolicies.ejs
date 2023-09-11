@@ -1,0 +1,173 @@
+<html>
+
+<head>
+    <title>A N insurance</title>
+</head>
+
+
+<style>
+    * {
+        margin: 10px;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .navigationbar {
+        /* border: 2px solid black; */
+        display: flex;
+
+    }
+
+    .companyname {
+        /* border: 2px solid black; */
+        font-size: 40px;
+    }
+
+    .allpolicies {
+        border: 2px red solid;
+        display: grid;
+    }
+
+
+
+    #box1,
+    #box2,
+    #box3,
+    #box4 {
+        border: 2px blue solid;
+    }
+
+
+    #selecter {
+        display: grid;
+        /* border: 2px rgb(159, 3, 3) solid; */
+    }
+
+    #btn {
+        font-size: 20px;
+        color: black;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #btn:hover {
+        color: rgb(255, 255, 255);
+        background-color: black;
+    }
+
+    .urpremium {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 70px;
+        border: 2px black solid;
+    }
+
+    .valuee {
+        margin-left: 70%;
+        /* border: 2px red solid; */
+
+    }
+
+
+    .navigationbar {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #192440;
+        color: white;
+        height: 70px;
+        /* grid-column-start: 2; */
+        /* grid-row-start: 1; */
+        /* justify-content: space-around; */
+    }
+
+    .heading {
+        display: flex;
+        justify-content: left;
+        font-size: 30px;
+        /* border: 2px black solid; */
+
+
+    }
+
+    .heading:hover {
+        cursor: pointer;
+    }
+
+    .list {
+        display: flex;
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* border: 2px red solid; */
+        font-size: 20px;
+        justify-content: right;
+        cursor: pointer;
+
+    }
+</style>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+<body>
+    <div class="navigationbar">
+        <div class="heading" onclick="window.location.href = '/'">A N Insurance</div>
+        <div class="nav-items">
+            <div class="list">
+                <div>Helpline</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+    </div>
+
+    <form action="" id="selecter">
+
+        <div>Choose Policy cover
+            <select name="cover" id="cover">
+                <!-- <option value="">Choose</option> -->
+                <option value="male">1,00,00,00</option>
+                <option value="male">80,00,000</option>
+                <option value="male">70,00,000</option>
+                <option value="male">60,00,000</option>
+                <option value="male">50,00,000</option>
+            </select>
+        </div>
+
+        <div>Choose Policy year
+            <select name="Salary" id="salary">
+                <!-- <option value="">Choose</option> -->
+                <option value="male">Cover for 60 year </option>
+                <option value="male">Cover for 75 year</option>
+                <option value="male">Cover for 85 year</option>
+                <option value="male">Cover for 95 year </option>
+                <option value="male">Cover for 100 year </option>
+            </select>
+        </div>
+
+        <div>Choose Paying Term
+            <select name="Salary" id="salary">
+                <!-- <option value="">Choose</option> -->
+                <option value="male">Monthly</option>
+                <option value="male">Quarterly</option>
+                <option value="male">Yearly</option>
+                <option value="male">One time Full Payment</option>
+
+            </select>
+        </div>
+
+        <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+        <div class="urpremium">
+            <div>Your Premium</div>
+            <div class="valuee">20,000</div>
+        </div>
+
+    </form>
+
+    <div class="butttn"><button id="btn">Payment 👍</button></div>
+
+</body>
+
+</html>

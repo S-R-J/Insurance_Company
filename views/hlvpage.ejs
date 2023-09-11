@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <title>A N insurance</title>
+    </head>
+
+
+    <style>
+        *{
+            margin: 10px;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .navigationbar {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #192440;
+        color: white;
+        height: 70px;
+        /* grid-column-start: 2; */
+        /* grid-row-start: 1; */
+        /* justify-content: space-around; */
+    }
+        
+        .companyname
+        {
+            /* border: 2px solid black; */
+            font-size: 40px;
+        }
+        
+        .details
+        {
+            /* border: 2px solid black; */
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+
+        #detailzz
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+            font-size: 30px;
+            margin-bottom: 50px;
+            
+            
+        }
+
+        #detailzz1
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .butttn
+        {
+            /* border: 2px solid black; */
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* margin-right: 30vw; */
+            
+          
+        }
+
+
+        #btn
+        {
+           color: white;
+           font-size: 25px;
+           background-color: black;
+           
+        }
+
+        #btn:hover { cursor: pointer;}
+
+        #hlvtext , .value
+        {
+            margin-top: 30px;
+            font-size: 35px;
+            /* border: 2px solid black; */
+        }
+        
+        .finalval
+        {
+            display: flex;
+            /* border: 2px solid black; */
+            align-items: center;
+            justify-content: center;
+        }
+
+    
+
+
+        .navigationbar
+    {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        /* grid-column-start: 2; */
+        /* grid-row-start: 1; */
+        /* justify-content: space-around; */
+    }
+    .heading
+    {
+        display: flex;
+        justify-content: left;
+        font-size: 30px;
+        /* border: 2px black solid; */
+       
+    
+    }
+
+    .heading:hover
+    {
+        cursor: pointer;
+    }
+    .list
+    {
+        display: flex;
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* border: 2px red solid; */
+        font-size: 20px;
+        justify-content: right;
+        cursor: pointer;
+        
+    }
+</style>
+
+
+<body>
+    <div class="navigationbar">
+        <div class="heading" onclick="window.location.href = '/'">A N Insurance</div>
+        <div class="nav-items">
+            <div class="list">
+                <div>Helpline</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    
+        </div>
+
+
+        <div class="details">
+            <div>
+                <div id="detailzz">HLV Calculate</div>
+                <form action="">
+                    <label for="" >Age</label><input  id="age1" type="text">
+                    <br>
+                    <label for="" >Annual Income</label><input  id="income" type="text">
+                    <br>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="butttn"  ><button id="btn" onclick= myfunction()>Calculate</button></div>
+
+        <div class="finalval">
+            <div id="hlvtext">Your HLV is = </div>
+            <div class="value" id="value">(Enter Age and Income)</div>
+        </div>
+
+    
+        <script>
+
+            function myfunction()
+            {
+                var age = document.getElementById("age1").value;
+                var income = document.getElementById("income").value;
+
+                
+                if(age >= 18 && age<=35)
+                {
+                    var hlv = 25 * income;
+                }
+
+
+                else if(age >= 36 && age<=40)
+                {
+                    var hlv = 20 * income;
+                }
+
+
+                else if(age >= 41 && age<=45)
+                {
+                    var hlv = 15 * income;
+                }
+
+
+                else if(age >= 46 && age<=50)
+                {
+                    var hlv = 12 * income;
+                }
+
+
+                else if(age >= 51 && age<=55)
+                {
+                    var hlv = 10 * income;
+                }
+
+
+                else if(age >= 56 && age <= 100)
+                {
+                    var hlv = 5 * income;
+                }
+                
+                else if(age >= 100)
+                {
+                    var hlv = 'Not Eligible due to age';
+                } 
+
+                else if(age < 18 && age != 0)
+                {
+                    var hlv = 'Not Eligible due to age';
+                } 
+                
+             
+                else if(income == 0 && age == 0)
+                {
+                    var hlv = 'Please Enter above age and Income';
+                }
+
+
+                document.getElementById('value').innerHTML = hlv;
+            }
+            
+        </script>
+
+
+
+    </body>
+
+
+</html>

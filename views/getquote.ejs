@@ -1,0 +1,485 @@
+<html>
+
+<head>
+    <title>A N insurance</title>
+</head>
+
+
+<style>
+    * {
+        margin: auto;
+        padding: auto;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .navigationbar {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #192440;
+        color: white;
+        height: 70px;
+
+    }
+
+
+    .details {
+        /* border: 2px solid black; */
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    #detailzz {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border-bottom: 2px solid black; */
+        font-size: 30px;
+        margin-bottom: 50px;
+        margin-top: -30px;
+
+
+    }
+
+    #detailzz1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border-bottom: 2px solid black; */
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+
+    .heading {
+        display: flex;
+        justify-content: left;
+        font-size: 35px;
+        /* border: 2px black solid; */
+    }
+
+    .heading:hover {
+        cursor: pointer;
+    }
+
+    /* -------------------------------------------------------------------------- */
+
+    .welcome {
+        display: flex;
+        justify-content: left;
+        /* border: 2px blue solid; */
+        font-size: 50px;
+        margin-top: 20px;
+        margin-left: 80px;
+
+    }
+
+
+    .formm {
+        padding: 30px;
+        border-radius: 15px 15px;
+        /* border: 2px #003f82 solid; */
+        /* background-color: rgb(231, 231, 231); */
+        width: 45vw;
+        margin-top: -25px;
+
+        box-shadow: 0px 0px 30px -8px black;
+        -webkit-box-shadow: 0px 0px 30px -8px black;
+        -moz-box-shadow: 0px 0px 30px -8px black;
+    }
+
+    .age_gender {
+        display: flex;
+        /* grid-template-columns: repeat(2, 1fr); */
+        margin-bottom: -10px;
+        border: 2px red solid;
+    }
+
+    #age_input{
+        font-size: 15px;
+        width: 80px;
+        height: 30px;
+        margin-left: 10px;
+        border: 1px black solid;
+        border-radius: 5px 5px;
+
+    }
+
+    #number_input
+    {
+        display: block;
+        font-size: 15px;
+        /* width: 80px; */
+        height: 30px;
+        margin-left: -20vw;
+        border: 1px black solid;
+        border-radius: 5px 5px;
+
+    }
+
+
+    /* --------------------------------------------------------------- */
+
+
+
+
+
+    .agee {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        justify-self: starts;
+        /* border: 2px blue solid; */
+
+    }
+
+    #enter_age {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 5px;
+
+
+    }
+
+
+
+    .genderr {
+        display: flex;
+        width: 300px;
+        /* border: 2px red solid; */
+    }
+
+
+    .label_gender,
+    .label_education,
+    .label_occupation,
+    .label_smoke {
+        display: flex;
+        width: 100px;
+        justify-content: center;
+        border: 2px black solid;
+        border-radius: 5px 5px;
+
+    }
+
+
+    .label_gender:hover,
+    .label_education:hover,
+    .label_occupation:hover,
+    .label_smoke:hover,
+    .label_occupation:hover
+    {
+        cursor: pointer;
+    }
+
+
+
+
+    .label_occupation {
+        margin-left: -20px;
+        width: 150px;
+    }
+
+    .male_female {
+        display: flex;
+        margin-left: 40px;
+        min-width: 15vw;
+        /* border: 2px rgb(25, 0, 255) solid; */
+    }
+
+    .male_female_occup {
+        display: flex;
+        width: 35vw;
+        margin-left: -50px;
+        /* border: 2px red solid; */
+    }
+
+
+    .ssc_hsc_graduate {
+        display: flex;
+        width: 25vw;
+        margin-left: -50px;
+        /* border: 2px red solid; */
+    }
+
+    .yes_no {
+        display: flex;
+        width: 20vw;
+        margin-left: -50px;
+        /* border: 2px red solid; */
+    }
+
+    .education,
+    .occupation,
+    .smoke {
+        margin-top: 15px;
+        margin-left: 0px;
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        justify-content: start;
+    }
+
+
+    .education {
+        margin-bottom: 17px;
+    }
+
+
+
+    input {
+        display: none;
+    }
+
+    #age_input {
+        display: block;
+    }
+
+    select {
+        border: 1px black solid;
+        border-radius: 5px 5px;
+    }
+
+
+
+    #education_heading,
+    #occupation_heading,
+    #smoke_heading,
+    #number_heading {
+        margin-left: 0px;
+
+    }
+
+
+    #gender_heading
+    {
+        margin-right: -20px;
+    }
+
+    #nummmbrr
+    {
+        margin-bottom: 20px;
+    }
+
+</style>
+
+
+<body>
+    <div class="navigationbar">
+        <div class="heading" onclick="window.location.href = '/'">A-N Insurance Company</div>
+        <!-- <div class="nav-items">
+            <div class="list">
+                <div>Helpline</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="welcome">
+        Hello, <%= username %>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    </div>
+    <div class="details">
+
+        <div>
+            <div id="detailzz1">Life Insurance Policies </div>
+            <div id="detailzz">Get Quote</div>
+            <form class="formm" action="/quote" method="post">
+
+                <div class="agee" id="nummmbrr">
+                    <label for="" id="number_heading">Mobile Number</label>
+                    <input type="text" pattern="[0-9]+" maxlength="10"
+                        minlength="10" placeholder="Enter Mobile Number" name="number" id="number_input" required>
+                </div>
+                
+                <br>
+
+
+                <div class="agee">
+                    <label id="enter_age" for="">Enter Age</label>
+                    <input type="text" minlength="2" maxlength="2" pattern="[0-9]+" name="age" id="age_input" required>
+                    <br>
+
+
+                    <div class="genderr">
+                        <div id="gender_heading">Gender</div>
+                        <input type="radio" id="gender_option-1" name="gender_option" onclick="gender_male()" value="Male" required>
+                        <input type="radio" id="gender_option-2" name="gender_option" onclick="gender_female()" value="Female" required>
+                        <div class="male_female">
+                            <label for="gender_option-1"><span class="label_gender" id="male">Male</span></label>
+                            <label for="gender_option-2"><span class="label_gender" id="female">Female</span></label>
+                        </div>
+
+                    </div>
+
+                </div>
+                <br>
+
+
+                <div class="education">
+                    <div id="education_heading">Education</div>
+
+                    <input type="radio" id="education_option-1" name="education_option" onclick="education_ssc()" value="SSC" required>
+                    <input type="radio" id="education_option-2" name="education_option" onclick="education_hsc()" value="HSC" required>
+                    <input type="radio" id="education_option-3" name="education_option" onclick="education_graduate()" value="Graduate" required>
+                    <div class="ssc_hsc_graduate">
+                        <label for="education_option-1"><span class="label_education" id="ssc">SSC</span></label>
+                        <label for="education_option-2"><span class="label_education" id="hsc">HSC</span></label>
+                        <label for="education_option-3"><span class="label_education"
+                                id="graduate">Graduate</span></label>
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+                <div>
+                    <br><label for="">Annual Income</label>
+                    <select name="income" id="salary"  required>
+                        <option value="0"></option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                        <option value="30000">30000</option>
+                        <option value="40000">40000</option>
+                    </select>
+                </div>
+
+
+                <br>
+                <div class="occupation">
+                    <div id="occupation_heading">Occupation</div>
+
+                    <input type="radio" id="occupation_option-1" name="occupation_option"
+                        onclick="occupation_salaried()" value="Salaried" required>
+                    <input type="radio" id="occupation_option-2" name="occupation_option" onclick="occupation_self()" value="Self-Employed" required>
+                    <input type="radio" id="occupation_option-3" name="occupation_option"
+                        onclick="occupation_berozgar()" value="Berozgar" required>
+                    <div class="male_female_occup">
+                        <label for="occupation_option-1"><span class="label_occupation"
+                                id="salaried">Salaried</span></label>
+                        <label for="occupation_option-2"><span class="label_occupation"
+                                id="self">Self-Employed</span></label>
+                        <label for="occupation_option-3"><span class="label_occupation"
+                                id="berozgar">Berozgaar</span></label>
+                    </div>
+                </div>
+
+
+
+                <br>
+                <div class="smoke">
+                    <div id="smoke_heading">Do you Smoke</div>
+
+                    <input type="radio" id="smoke_option-1" name="smoke_option" onclick="smoke_yes()" value="Yes" required>
+                    <input type="radio" id="smoke_option-2" name="smoke_option" onclick="smoke_no()" value="No" required>
+                    <div class="yes_no">
+                        <label for="smoke_option-1"><span class="label_smoke" id="yes">Yes</span></label>
+                        <label for="smoke_option-2"><span class="label_smoke" id="no">No</span></label>
+
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <div class="butttn"><button id="btn" type="submit" name="save">Submit</button></div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+    function gender_male() {
+        document.getElementById('male').style = 'background-color: black; color: white;';
+        document.getElementById('female').style = 'background-color: white; color: black;';
+        // document.getElementById('female').style.backgroundColor = 'white';
+
+    }
+    function gender_female() {
+        document.getElementById('female').style = 'background-color: black; color: white;';
+        document.getElementById('male').style = 'background-color: white; color: black;';
+
+    }
+
+    // -----------------------------------------------------------------------------------
+
+
+    function education_ssc() {
+        document.getElementById('ssc').style = 'background-color: black; color: white;';
+        document.getElementById('hsc').style = 'background-color: white; color: black;';
+        document.getElementById('graduate').style = 'background-color: white; color: black;';
+
+    }
+    function education_hsc() {
+        document.getElementById('ssc').style = 'background-color: white; color: black;';
+        document.getElementById('hsc').style = 'background-color: black; color: white;';
+        document.getElementById('graduate').style = 'background-color: white; color: black;';
+
+    }
+    function education_graduate() {
+        document.getElementById('ssc').style = 'background-color: white; color: black;';
+        document.getElementById('hsc').style = 'background-color: white; color: black;';
+        document.getElementById('graduate').style = 'background-color: black; color: white;';
+
+    }
+
+
+    // -----------------------------------------------------------------------------------
+
+
+    function occupation_salaried() {
+        document.getElementById('salaried').style = 'background-color: black; color: white;';
+        document.getElementById('self').style = 'background-color: white; color: black;';
+        document.getElementById('berozgar').style = 'background-color: white; color: black;';
+
+    }
+    function occupation_self() {
+        document.getElementById('salaried').style = 'background-color: white; color: black;';
+        document.getElementById('self').style = 'background-color: black; color: white;';
+        document.getElementById('berozgar').style = 'background-color: white; color: black;';
+
+    }
+    function occupation_berozgar() {
+        document.getElementById('salaried').style = 'background-color: white; color: black;';
+        document.getElementById('self').style = 'background-color: white; color: black;';
+        document.getElementById('berozgar').style = 'background-color: black; color: white;';
+
+    }
+
+
+    // -----------------------------------------------------------------------------------
+
+
+    function smoke_yes() {
+        document.getElementById('yes').style = 'background-color: black; color: white;';
+        document.getElementById('no').style = 'background-color: white; color: black;';
+
+    }
+    function smoke_no() {
+        document.getElementById('yes').style = 'background-color: white; color: black;';
+        document.getElementById('no').style = 'background-color: black; color: white;';
+
+    }
+
+
+
+</script>
+
+
+</html>

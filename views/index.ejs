@@ -1,0 +1,415 @@
+<html>
+
+<head>
+    <title>A N Insurance</title>
+
+
+</head>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+    * {
+
+        margin: auto;
+        padding: auto;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    html
+    {
+        scroll-behavior:smooth;
+    }
+
+    .navigationbar {
+        border: 2px black solid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #192440;
+        color: white;
+        height: 70px;
+    }
+
+    .heading {
+        font-size: 35px;
+        /* border: 2px black solid; */
+
+    }
+
+    .heading:hover {
+        cursor: pointer;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* border: 2px red solid; */
+        font-size: 20px;
+
+
+
+    }
+
+    #list1,
+    #list2,
+    #list3 {
+        margin-left: 40px;
+
+    }
+
+    #list3 {
+        margin-left: 20px;
+    }
+
+    #list1:hover,
+    #list2:hover,
+    #list3:hover {
+        margin-left: 40px;
+        cursor: pointer;
+
+    }
+
+
+    #list3:hover {
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .login {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 15%;
+
+        /* border: 2px blue solid; */
+    }
+
+    #login-btn {
+        width: 100px;
+        font-size: 25px;
+        border-radius: 20px;
+
+    }
+
+    #login-btn:hover {
+        width: 100px;
+        cursor: pointer;
+        color: #ffffff;
+        /* box-shadow: 2px 2px 2px 2px  #00FFAD; */
+        box-shadow: 0px 0px 23px 8px #00FFAD;
+        -webkit-box-shadow: 0px 0px 23px 8px #00FFAD;
+        -moz-box-shadow: 0px 0px 23px 8px #00FFAD;
+        ;
+        background-color: #192440;
+
+    }
+
+
+    .photo {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .products {
+        display: flex;
+        /* border: 2px rgb(44, 117, 207) solid; */
+        font-size: 30px;
+        height: 100px;
+        border-radius: 10px 10px;
+        /* border-bottom:2px solid #192440; */
+    }
+
+    .life-inc {
+        margin-right: 5%;
+    }
+
+    .general-inc {
+        margin-left: 5%;
+    }
+
+    .life-inc,
+    .general-inc {
+
+        font-size: 30px;
+        width: 23%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border: 2px solid #192440;
+        border-radius: 10px 10px;
+    }
+
+
+    .life-inc:hover,
+    .general-inc:hover {
+
+        box-shadow: 2px 2px 2px 3px #aaaaaa;
+        border-radius: 15px 15px;
+        cursor: pointer;
+        font-size: 35px;
+
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background-color: #192440;
+        color: white;
+
+        transition: 0.3s;
+        box-shadow: 0px 0px 10px 3px #00FFAD;
+        -webkit-box-shadow: 0px 0px 10px 3px #00FFAD;
+        -moz-box-shadow: 0px 0px 10px 3px #00FFAD;
+        width: 23%;
+    }
+
+
+
+    .hlv {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        border: 2px rgb(44, 117, 207) solid;
+        border-radius: 13px 13px;
+        margin-left: 8%;
+        margin-right: 8%;
+        padding: 10px;
+    }
+
+    .info {
+        display: flex;
+        /* margin-left: 10%; */
+        /* border: 2px rgb(255, 0, 183) solid; */
+        font-size: 22px;
+
+    }
+
+    .hlv-text {
+        font-size: 25px;
+        border: 2px rgb(44, 117, 207) solid;
+        border-radius: 10px 10px;
+        width: 53%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .hlv-text:hover {
+        cursor: pointer;
+        background-color: rgb(44, 117, 207);
+        color: white;
+        width: 53%;
+        height: 20%;
+        box-shadow: 0px 0px 10px 3px #a1a1a1;
+        -webkit-box-shadow: 0px 0px 10px 3px #a1a1a1;
+        -moz-box-shadow: 0px 0px 10px 3px #a1a1a1;
+
+    }
+
+    .search {
+        display: flex;
+        border: 2px rgb(44, 117, 207) solid;
+        font-size: 30px;
+        border-radius: 10px 10px;
+    }
+
+    #search-input {
+        display: flex;
+        width: 70%;
+        height: 40px;
+        justify-self: start;
+    }
+
+
+
+    /********** contact **********/
+    #contact {
+        margin-top: 50px;
+        background-color: #192440;
+
+    }
+
+    /* #box1
+{
+    border: 2px white solid;
+    border-radius: 20px 20px;
+} */
+
+
+    #contact form {
+        color: #00FFAD;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        background: transparent;
+        border: 1px solid #00FFAD;
+        color: #ffffff;
+    }
+
+    /* ---------------------------------------------------------------------------------------- */
+    /* Helpline */
+
+    .tap
+    {
+        display: none;
+        /* border: 2px red solid; */
+        background-color: #192440;
+        position: absolute;
+        margin-top: 50px;
+        width: 300px;
+        
+        
+    }
+
+
+</style>
+
+
+<body>
+    <section class="whole">
+
+        <div class="navigationbar">
+            <div class="heading" onclick="window.location.href = '/'">A-N Insurance Company</div>
+            <div class="nav-items">
+                <div class="list">
+                    <div class="helpline" id="list1" onclick="ShowDiv()">Helpline</div>
+                    <div id="tap" class="tap"><ul class="helpline-content">
+                        <li>Email : an.insu@gmail.com</li>
+                        <li>Phone :<br>Ashish Bhosale (9075943766) <br> Nikhil gaikwad (9146713898)</li>
+                        <li>Address : AN insurance building, kharadi, pune</li>
+                        <!-- <li>copyrigt@ <br> all rights reserved </li> -->
+                      
+                        <!-- <li>great thanks to: prof. Sudhir sir <br> </li> -->
+                    </ul></div>
+                    <div id="list2" onclick="window.location.href='#contact'">About</div>
+                    <div id="list3" onclick="window.location.href='#contact'">Contact</div>
+                </div>
+            </div>
+            
+            <!-- <div class="login"><button id="login-btn" ><a href="/signin">Login</a></button></div> -->
+            <div class="login"><button id="login-btn" onclick="window.location.href ='/signin'" >Login</button></div>
+        </div>
+
+        <!-- -------------------------------------------- -->
+
+
+        <div class="photo">
+            <img width="80%" src="images\homepage.jpg" srcset="images\homepage.jpg 500w, images\homepage.jpg 400w" alt="ERROR">
+        </div>
+
+
+
+        <!-- -------------------------------------------- -->
+
+        <div class="products">
+            <div class="life-inc" onclick="window.location.href = '/signin'">Life Insurance</div>
+            <div class="general-inc" onclick="window.location.href = '/signin'">General Insurance</div>
+        </div>
+
+        <!-- -------------------------------------------- -->
+
+
+        <br><br><br>
+        <div class="hlv">
+
+            <img src="/images/hlv.png" data-aos="slide-right" alt="" height="200px">
+            <div class="info" text align="center">Human Life Value (HLV) or Ideal Life Cover is a number that tells the
+                present value of future income expenses, liabilities and investments.
+                The HLV number is taken usually to understand how much money would be required to secure the lives of
+                your
+                dependents with term insurance, in case you are no longer around.</div>
+            <div class="hlv-text" onclick="window.location.href = '/hlvpage'" data-aos="slide-left">HLV
+                Calculator
+            </div>
+        </div>
+
+        <!-- -------------------------------------------- -->
+
+
+
+
+
+        <!-- contact -->
+        <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(img/contact-bk.jpg);">
+            <div class="container my-5">
+                <div class="row justify-content-between" id="box1">
+                    <div class="col-md-6 text-white">
+                        <h2 class="font-weight-bold" style="font-size: 40px;" href="#top">Contact Us</h2>
+                        <p class="my-4">
+                            Insurance: overly complicated, and you are never sure if it is the insurance you actually
+                            need.
+                            We have built a solution: a digital insurance companion.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li>Email : an.insu@gmail.com</li>
+                            <li>Phone : 9075943765</li>
+                            <li>Address : AN insurance building, kharadi, pune</li>
+                            <li>copyrigt@ <br> all rights reserved </li>
+                            <li>web_site developed by <br> Ashish Bhosale (9075943766) <br> Nikhil gaikwad (9146713898)</li>
+                            <li>great thanks to: prof. Sudhir sir <br> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <form method="post" action="homepagedefault.php">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Your Name :</label>
+                                    <input type="name" class="form-control" id="name" name="Cname">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="Email">Your number :</label>
+                                    <input type="text" pattern="[0-9]+" maxlength="10" minlength="10"
+                                        class="form-control" id="Email" name="Cmob">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="name">message or feedback :</label>
+                                <input type="name" class="form-control" id="name" name="Cmsg">
+
+
+                                <!-- <div class="form-group">
+                            <label for="message">Message</label>
+                            <input class="form-control" id="message" rows="3" name="Cmsg">
+                        </div> -->
+                                <button type="submit"
+                                    class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3"
+                                    name="save">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        
+
+        function ShowDiv() {
+        document.getElementById("tap").style = "display: block;";  }
+    </script>
+
+<script type="text/javascript">
+        $(document).mouseup(function (e) {
+            if ($(e.target).closest(".tap").length === 0) {
+                $(".tap").hide();
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
